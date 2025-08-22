@@ -1,0 +1,174 @@
+@import "html5";
+@import "colors";
+@import "breakpoints";
+@import "prefix-mixins";
+
+@import "themes";
+@import "introduction";
+@import "brewing-preview";
+@import "searchbars";
+@import "checkboxes";
+@import "search-results";
+
+body
+{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  
+  background: $color-background;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+header
+{
+  &>h1
+  {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    
+    color: $color-main-title;
+    text-align: center;
+    
+    font:
+    {
+      family: "Cinzel Decorative", serif;
+      weight: 700;
+      size: 36pt;
+    }
+    
+    margin:
+    {
+      top: 24pt;
+      bottom: 32pt;
+      left: 0;
+      right: 0;
+    }
+    
+    @include when-under-breakpoint($breakpoint-foxtrot)
+    {
+      font-size: 32pt;
+      margin-top: 22pt;
+      margin-bottom: 30pt;
+    }
+    
+    @include when-under-breakpoint($breakpoint-golf)
+    {
+      font-size: 28pt;
+      margin-top: 20pt;
+      margin-bottom: 28pt;
+    }
+    
+    @include when-under-breakpoint($breakpoint-hotel)
+    {
+      font-size: 24pt;
+      margin-top: 18pt;
+      margin-bottom: 24pt;
+    }
+  }
+}
+
+main
+{
+  display: block;
+  box-sizing: border-box;
+  
+  width: 100%;
+  max-width: $breakpoint-alpha;
+  
+  background: $color-foreground;
+  border-radius: 12pt 0 12pt 12pt;
+  
+  padding:
+  {
+    top: 24pt;
+    bottom: 36pt;
+    left: 12pt;
+    right: 12pt;
+  }
+  
+  margin:
+  {
+    top: 0;
+    bottom: 20vh;
+    left: 0;
+    right: 0;
+  }
+  
+  @include when-under-breakpoint($breakpoint-alpha)
+  { border-radius: 0; }
+  
+  @include when-under-breakpoint($breakpoint-charlie)
+  { padding-left: 8pt; padding-right: 8pt; }
+  
+  @include when-under-breakpoint($breakpoint-delta)
+  { padding-top: 18pt; padding-bottom: 27pt; }
+  
+  @include when-under-breakpoint($breakpoint-foxtrot)
+  { padding-top: 12pt; padding-bottom: 18pt; padding-left: 4pt; padding-right: 4pt; }
+}
+
+
+section
+{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  
+  &:not(:first-of-type) { padding-top: 12pt; }
+  &:not(:last-of-type) { padding-bottom: 24pt; }
+}
+
+footer#version-info
+{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-end;
+  justify-content: center;
+  
+  width: 75%;
+  margin-bottom: 5vh;
+  
+  &>span.version-note
+  {
+    font:
+    {
+      family: "Montserrat", sans-serif;
+      weight: 500;
+      size: 10pt;
+    }
+    
+    margin:
+    {
+      top: 3pt;
+      bottom: 0;
+      left: 6pt;
+      right: 6pt;
+    }
+    
+    &>a,
+    &>a:link,
+    &>a:visited
+    {
+      color: $color-body-text;
+      text-decoration: none;
+    }
+    
+    &>a:focus,
+    &>a:hover,
+    &>a:active
+    {
+      text-decoration: underline;
+    }
+  }
+  
+  @include when-under-breakpoint($breakpoint-delta)
+  {
+    width: calc(100% - 24pt);
+  }
+}

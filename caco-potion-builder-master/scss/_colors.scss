@@ -1,0 +1,59 @@
+:root
+{
+  --theme-alchemy-background: #52CC52;
+  --theme-alchemy-foreground: #E6CF8A;
+  --theme-alchemy-form-background: #FFF2CC;
+  --theme-alchemy-form-background-focus: #FFF9E6;
+  --theme-alchemy-border: #338033;
+  --theme-alchemy-text: #0F260F;
+  
+  --theme-morn-background: #ffd9df;
+  --theme-morn-foreground: #f2deb6;
+  --theme-morn-form-background: #ffe1a6;
+  --theme-morn-form-background-focus: #fff4bf;
+  --theme-morn-border: #4d302e;
+  --theme-morn-text: #261514;
+  
+  --theme-cosmogony-background: #1F1F66;
+  --theme-cosmogony-foreground: #0F3299;
+  --theme-cosmogony-form-background: #133EBF;
+  --theme-cosmogony-form-background-focus: #002699;
+  --theme-cosmogony-border: #CCAC33;
+  --theme-cosmogony-text: #F2CF49;
+  
+  --theme-sanguine-background: #333333;
+  --theme-sanguine-foreground: #262424;
+  --theme-sanguine-form-background: #D9D9C3;
+  --theme-sanguine-form-background-focus: #FFFFE6;
+  --theme-sanguine-border: #D9213F;
+  --theme-sanguine-text: #bf1330;
+  
+  // #################################################### //
+  
+  --color-background: var(--theme-alchemy-background);
+  --color-foreground: var(--theme-alchemy-foreground);
+  --color-form-background: var(--theme-alchemy-form-background);
+  --color-form-background-focus: var(--theme-alchemy-form-background-focus);
+  --color-border: var(--theme-alchemy-border);
+  --color-text: var(--theme-alchemy-text);
+}
+
+$color-main-title: var(--color-text);
+$color-background: var(--color-background);
+$color-foreground: var(--color-foreground);
+$color-body-text: var(--color-text);
+
+$color-brewing-background: var(--color-form-background);
+$color-brewing-background-focus: var(--color-form-background-focus);
+$color-brewing-border: var(--color-border);
+$color-brewing-text: var(--color-text);
+
+$color-form-background: var(--color-form-background);
+$color-form-background-focus: var(--color-form-background-focus);
+$color-form-border: var(--color-border);
+$color-form-text: var(--color-text);
+
+$color-results-background: var(--color-form-background);
+$color-results-background-focus: var(--color-form-background-focus);
+$color-results-border: var(--color-border);
+$color-results-text: var(--color-text);
